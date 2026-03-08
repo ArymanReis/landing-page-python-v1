@@ -1,0 +1,12 @@
+# Arquivos de Sistema do Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Arquivos de Sistema do Mac 
+
+# Configurações locais do VS Code 
+.vscode/
+
+# Logs de erro 
+*.log
