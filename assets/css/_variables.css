@@ -1,0 +1,45 @@
+/* assets/css/_variables.css */
+
+:root {
+    /* =========================================
+       PALETA DE CORES PRIMÁRIAS
+       ========================================= */
+    --color-bg-dark: #0E0E15; /* Fundo principal */
+    --color-primary: #4D4DFF; /* Azul destaque (YouTube, etc) */
+    --color-text-light: #F8FAFC; /* Texto claro */
+
+    /* =========================================
+       PALETA DE CORES SECUNDÁRIAS (Botões e Destaques)
+       ========================================= */
+    --color-green-dark: #03A63C; 
+    --color-green-light: #04D939;
+
+    /* =========================================
+       GRADIENTES E BORDAS (Novos)
+       ========================================= */
+    --gradient-button: linear-gradient(3deg, #3E3ECC 13.5%, #03A63C 50.14%, #04D939 86.78%);
+    --radius-button: 10px;
+
+    /* =========================================
+       TIPOGRAFIA
+       ========================================= */
+    --font-primary: 'Montserrat', sans-serif;
+    
+    /* Pesos da fonte (Font Weights) */
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* =========================================
+       ESPAÇAMENTOS E LAYOUT (Base Mobile First)
+       ========================================= */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xx: 32px;
+    --spacing-xl: 40px;
+    --spacing-xxl: 48px;
+    
+    --container-padding: 24px; /* Respiro lateral no celular */
+}

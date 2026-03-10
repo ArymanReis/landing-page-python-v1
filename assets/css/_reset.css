@@ -1,0 +1,30 @@
+/* assets/css/_reset.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garante que imagens e vídeos nunca vazem a tela no mobile */
+img, picture, video, canvas, svg, iframe {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove estilos padrão de listas e botões/links */
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}

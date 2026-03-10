@@ -1,0 +1,38 @@
+/* assets/css/components/_buttons.css */
+
+.hero__cta-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Propriedades de fonte: */
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold); /* 600 */
+    line-height: 1.5;
+    
+    /* Adaptado para Responsividade (Mobile First) */
+    width: 100%;
+    max-width: 100%; 
+    
+    padding: 16px 10px;
+    
+    /* Usando nossas variáveis */
+    background: var(--gradient-button);
+    border-radius: var(--radius-button);
+    
+    /* Estilos de Texto (Tipografia) */
+    color: var(--color-text-light);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none; /* Tira o sublinhado padrão do link <a> */
+    text-transform: uppercase;
+    
+    /* Efeito de transição suave para quando passarmos o mouse (hover) futuramente */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeito de Hover (Quando passa o mouse no Desktop) */
+.hero__cta-button:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}

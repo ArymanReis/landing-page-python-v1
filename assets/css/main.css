@@ -1,0 +1,11 @@
+/* assets/css/main.css */
+
+@import '_variables.css';
+@import '_reset.css';
+@import '_base.css';
+
+/* Por enquanto temos só esse componente */
+@import 'components/_buttons.css';
+
+/* Seções */
+@import 'sections/_hero.css';

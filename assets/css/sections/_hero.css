@@ -1,0 +1,82 @@
+/* assets/css/sections/_hero.css */
+
+.hero {
+    /* Padding para afastar do topo da tela e garantir respiro lateral */
+    padding: var(--spacing-xxl) var(--container-padding);
+    background-color: var(--color-bg-dark);
+}
+
+.hero__container {
+    /* Flexbox organiza tudo em uma coluna perfeita no mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl); /* Espaçamento padrão de 32px entre os blocos */
+    
+    max-width: var(--container-width);
+    margin: 0 auto; /* Centraliza no desktop */
+}
+
+/* --- TEXTOS --- */
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl); /* 16px entre os textos */
+}
+
+.hero__pre-headline {
+    font-size: 14px;
+    font-weight: var(--font-weight-regular); /* 400 */
+    line-height: 1.71; /* 171.429% do Figma */
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.hero__headline {
+    font-size: 32px;
+    font-weight: var(--font-weight-extrabold); /* 800 */
+    line-height: 1.125; /* 112.5% do Figma */
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+/* O destaque da palavra YouTube */
+.hero__headline .text-highlight {
+    color: var(--color-primary);
+}
+
+.hero__description {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular); /* 400 */
+    line-height: 1.5; /* 150% do Figma */
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+/* Estilo para as palavras em negrito na descrição e citação */
+.hero__description strong,
+.hero__sub-quote strong {
+    font-weight: var(--font-weight-semibold); /* 600 */
+}
+
+.hero__sub-quote {
+    font-size: 14px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.71;
+    color: var(--color-text-light);
+    text-align: center;
+    max-width: 251px; /* Restrição exata que você colocou no Figma */
+}
+
+/* --- VÍDEO RESPONSIVO --- */
+
+.hero__video-container {
+    width: 100%;
+    /* Truque moderno para manter a proporção do YouTube (16:9) sem quebrar no celular */
+    aspect-ratio: 16 / 9; 
+    border-radius: 8px; /* Cantos arredondados para ficar elegante */
+    overflow: hidden;
+    background-color: #000; /* Fundo preto caso o vídeo demore a carregar */
+}

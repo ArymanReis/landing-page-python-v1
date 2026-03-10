@@ -1,0 +1,16 @@
+/* assets/css/_base.css */
+
+html {
+    /* Facilita a rolagem suave quando clicar em links âncora (como o botão que vai pro checkout) */
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: var(--font-primary);
+    
+    /* Deixa a fonte mais nítida nas telas */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
