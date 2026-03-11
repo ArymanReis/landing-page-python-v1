@@ -1,0 +1,79 @@
+.symptoms {
+    /* O respiro de 80px no topo para separar da seção anterior */
+    padding: 60px var(--container-padding) var(--spacing-xxl);
+    background-color: var(--color-bg-dark);
+}
+
+.symptoms__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Distância entre os textos e os cards */
+    
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* --- TEXTOS DA SEÇÃO --- */
+.symptoms__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+    max-width: 800px; /* Trava a largura do texto para boa leitura */
+}
+
+.symptoms__title {
+    font-size: 24px;
+    font-weight: var(--font-weight-extrabold); /* 800 */
+    line-height: 1.5;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.symptoms__description {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.symptoms__description strong {
+    font-weight: var(--font-weight-semibold);
+}
+
+/* --- LISTA DE CARDS --- */
+.symptoms__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* Espaço entre um card e outro */
+    width: 100%;
+}
+
+/* =========================================
+   RESPONSIVIDADE (Tablet e Desktop)
+   ========================================= */
+
+@media (min-width: 768px) {
+    .symptoms {
+        /* Aumenta o respiro no Desktop para 120px, fica ainda mais elegante */
+        padding: 120px var(--container-padding) 60px; 
+    }
+
+    .symptoms__title {
+        font-size: 36px; /* Título maior no PC */
+        line-height: 1.2;
+    }
+
+    .symptoms__description {
+        font-size: 18px; /* Texto mais legível */
+    }
+
+    .card-symptom {
+        /* Permite que o card estique mais no PC, acompanhando a largura do texto (700px) */
+        max-width: 800px; 
+        padding: 24px 32px; /* Mais área de respiro interno no PC */
+    }
+}

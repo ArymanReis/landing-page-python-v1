@@ -42,6 +42,11 @@
     text-align: center;
 }
 
+/* Nova classe para forçar a quebra no mobile */
+.break-mobile {
+    display: block;
+}
+
 /* O destaque da palavra YouTube */
 .hero__headline .text-highlight {
     color: var(--color-primary);
@@ -79,4 +84,81 @@
     border-radius: 8px; /* Cantos arredondados para ficar elegante */
     overflow: hidden;
     background-color: #000; /* Fundo preto caso o vídeo demore a carregar */
+}
+
+/* =========================================
+   RESPONSIVIDADE (Tablet e Desktop)
+   ========================================= */
+
+/* CELULARES MUITO PEQUENOS (Até 360px - ex: iPhone SE) */
+@media (max-width: 360px) {
+    .hero__headline {
+        font-size: 28px;
+    }
+    .hero__cta-button {
+        font-size: 14px;
+        padding: 16px 8px; /* Ajuste fino no padding lateral */
+    }
+}
+
+/* TABLETS (A partir de 768px) */
+@media (min-width: 768px) {
+    .hero {
+        padding: 64px var(--container-padding);
+    }
+
+    .hero__headline {
+        font-size: 48px;
+        max-width: 800px;
+    }
+
+    .hero__description {
+        font-size: 18px;
+        max-width: 800px;
+    }
+
+    /* O vídeo ganha uma largura máxima de 720px */
+    .hero__video-container {
+        max-width: 720px;
+    }
+
+    /* --- CORREÇÃO DO BOTÃO --- */
+    /* Faz o botão ter a mesma largura máxima do vídeo (720px) e ocupar 100% desse espaço */
+    .hero__cta-button {
+        width: 100%; /* Ocupa toda a largura disponível */
+        max-width: 720px; /* Trava no mesmo tamanho do vídeo */
+    }
+
+    /* Desliga a quebra forçada em telas maiores para o texto fluir naturalmente */
+    .break-mobile {
+        display: none;
+    }       
+}
+
+/* DESKTOP (A partir de 1024px) */
+@media (min-width: 1024px) {
+    .hero {
+        padding: 80px var(--container-padding);
+    }
+
+    .hero__headline {
+        font-size: 56px;
+        line-height: 1.2;
+    }
+
+    /* O vídeo aumenta para 900px */
+    .hero__video-container {
+        max-width: 900px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    /* --- CORREÇÃO DO BOTÃO --- */
+    /* Atualiza a largura máxima para acompanhar o novo tamanho do vídeo (900px) */
+    .hero__cta-button {
+        max-width: 900px;
+        
+        /* Estilos extras de desktop */
+        padding: 20px 10px;
+        font-size: 18px;
+    }
 }

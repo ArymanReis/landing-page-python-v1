@@ -7,6 +7,7 @@
     --color-bg-dark: #0E0E15; /* Fundo principal */
     --color-primary: #4D4DFF; /* Azul destaque (YouTube, etc) */
     --color-text-light: #F8FAFC; /* Texto claro */
+    --color-text-dark: #0E0E15; /* Texto claro */
 
     /* =========================================
        PALETA DE CORES SECUNDÁRIAS (Botões e Destaques)
@@ -18,6 +19,10 @@
        GRADIENTES E BORDAS (Novos)
        ========================================= */
     --gradient-button: linear-gradient(3deg, #3E3ECC 13.5%, #03A63C 50.14%, #04D939 86.78%);
+
+    /* Novo gradiente para os cards de sintomas */
+    --gradient-red: linear-gradient(0deg, #F98484 0%, #F53C3C 100%);
+
     --radius-button: 10px;
 
     /* =========================================

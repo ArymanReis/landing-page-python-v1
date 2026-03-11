@@ -4,8 +4,10 @@
 @import '_reset.css';
 @import '_base.css';
 
-/* Por enquanto temos só esse componente */
+/* Componentes */
 @import 'components/_buttons.css';
+@import 'components/_cards.css';
 
 /* Seções */
 @import 'sections/_hero.css';
+@import 'sections/_symptoms.css';

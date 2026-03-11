@@ -14,7 +14,7 @@
     width: 100%;
     max-width: 100%; 
     
-    padding: 16px 10px;
+    padding: 20px 10px;
     
     /* Usando nossas variáveis */
     background: var(--gradient-button);
