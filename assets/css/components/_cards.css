@@ -27,3 +27,39 @@
 .card-symptom strong {
     font-weight: var(--font-weight-semibold); 
 }
+
+/* --- Variação: Card de Funcionalidade (Verde) --- */
+
+.card-feature {
+display: flex;
+    align-items: center; 
+    
+    width: 100%;
+    max-width: 353px; 
+    padding: 16px 20px; 
+    background-color: var(--color-text-light); 
+    
+    /* --- O Truque do Gradiente na Borda --- */
+    border-left: 5px solid transparent; /* Cria o espaço transparente de 5px */
+    border-image-source: var(--gradient-green); /* Puxa a sua nova variável! */
+    border-image-slice: 1; /* Preenche o espaço perfeitamente */
+}
+
+.card-feature p {
+    color: var(--color-text-dark);
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5; 
+}
+
+.card-feature strong {
+    font-weight: var(--font-weight-semibold); 
+}
+
+/* Responsividade do Card Verde */
+@media (min-width: 768px) {
+    .card-feature {
+        max-width: 800px; 
+        padding: 24px 32px; 
+    }
+}

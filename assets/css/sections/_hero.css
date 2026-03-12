@@ -138,7 +138,7 @@
 /* DESKTOP (A partir de 1024px) */
 @media (min-width: 1024px) {
     .hero {
-        padding: 80px var(--container-padding);
+        padding: 60px var(--container-padding);
     }
 
     .hero__headline {

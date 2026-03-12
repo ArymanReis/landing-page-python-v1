@@ -22,6 +22,7 @@
 
     /* Novo gradiente para os cards de sintomas */
     --gradient-red: linear-gradient(0deg, #F98484 0%, #F53C3C 100%);
+    --gradient-green: linear-gradient(0deg, #04D939 0%, #03A63C 100%);
 
     --radius-button: 10px;
 
