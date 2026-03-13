@@ -1,5 +1,5 @@
 .symptoms {
-    /* O respiro de 80px no topo para separar da seção anterior */
+    /* O respiro de 60px no topo para separar da seção anterior */
     padding: 60px var(--container-padding) var(--spacing-xxl);
     background-color: var(--color-bg-dark);
 }

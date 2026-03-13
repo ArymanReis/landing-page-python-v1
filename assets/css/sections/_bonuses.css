@@ -1,0 +1,190 @@
+/* assets/css/sections/_bonuses.css */
+
+.bonuses {
+    background-color: var(--color-bg-dark);
+}
+
+/* --- TEXTO DE TRANSIÇÃO (Fundo Escuro) --- */
+.bonuses__intro {
+    padding: 80px var(--container-padding);
+    display: flex;
+    justify-content: center;
+}
+
+.bonuses__intro-title {
+    font-size: 24px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+    color: var(--color-text-light);
+    text-align: center;
+    max-width: 700px;
+}
+
+.bonuses__intro-title strong {
+    font-weight: var(--font-weight-semibold);
+}
+
+/* --- ÁREA DO GRADIENTE E BÔNUS --- */
+.bonuses__wrapper {
+    background: var(--gradient-bonuses);
+    padding: 64px var(--container-padding) 80px;
+}
+
+.bonuses__container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+/* --- CABEÇALHO BÔNUS EXCLUSIVOS --- */
+.bonuses__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bonuses__icon {
+    width: 32px;
+    height: 32px;
+}
+
+.bonuses__title {
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-light);
+}
+
+/* --- LISTA DE CARDS DE BÔNUS --- */
+.bonuses__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px; /* Espaço generoso entre um bônus e outro */
+    width: 100%;
+}
+
+.bonus-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    max-width: 353px; 
+    
+    /* --- Efeito Glassmorphism (Vidro Fosco) do Figma --- */
+    background: rgba(251, 248, 252, 0.20);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px); /* Suporte essencial para navegadores da Apple */
+    border-radius: 5px;
+    
+    /* Respiro interno para o conteúdo não colar nas bordas do vidro */
+    padding: 32px 24px;
+}
+
+.bonus-card__image {
+    width: 100%;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2)); 
+    border-radius: 5px; /* Arredonda a imagem para acompanhar o vidro */
+}
+
+.bonus-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.bonus-card__title {
+    font-size: 20px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    color: var(--color-text-light);
+}
+
+.bonus-card__subtitle {
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    color: var(--color-text-light);
+}
+
+.bonus-card__description {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+    color: var(--color-text-light);
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+/* --- PREÇO ANCORADO --- */
+.bonus-card__price {
+    color: var(--color-text-light);
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px;
+}
+
+.price-small {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+}
+
+.price-strike {
+    font-size: 24px;
+    font-weight: var(--font-weight-extrabold);
+    text-decoration: line-through; /* O risco no valor antigo */
+    opacity: 0.8; /* Dá uma leve apagada no valor antigo */
+}
+
+.price-free {
+    font-size: 24px;
+    font-weight: var(--font-weight-extrabold);
+}
+
+/* =========================================
+   RESPONSIVIDADE (Tablet e Desktop)
+   ========================================= */
+
+@media (min-width: 768px) {
+    .bonuses__container {
+        max-width: 800px; /* Mantém o seu padrão impecável de 800px */
+    }
+
+    .bonuses__intro-title {
+        font-size: 36px;
+    }
+
+    .bonuses__list {
+        flex-direction: column; /* Garante que os bônus fiquem um embaixo do outro */
+        gap: 48px;
+    }
+
+    /* --- A Mágica do Card Horizontal --- */
+    .bonus-card {
+        flex-direction: row; /* Coloca a imagem e o texto lado a lado! */
+        max-width: 100%; /* O card agora ocupa toda a largura de 800px */
+        padding: 40px; /* Um respiro maior dentro do vidro fosco */
+        gap: 40px; /* Espaço entre a imagem da esquerda e o texto da direita */
+    }
+
+    .bonus-card__image {
+        width: 45%; /* A imagem assume quase metade do card */
+        max-width: 300px; /* Trava de segurança para não ficar gigante */
+        margin: 0 auto; /* Centraliza a imagem se a tela diminuir um pouco */
+    }
+
+    .bonus-card__content {
+        width: 55%; /* O texto assume o restante do espaço */
+        align-items: center; /* Mantém o texto centralizado na coluna dele (igual ao Figma) */
+        justify-content: center;
+    }
+
+    .bonus-card__price {
+        margin-top: 16px; /* Descola o preço do texto de cima */
+    }
+}
