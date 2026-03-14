@@ -144,6 +144,9 @@
 
 /* --- BOTÃO --- */
 .checkout__button {
+    display: block; /* Garante que o link respeite as margens e a largura de 100% */
+    text-decoration: none; /* Remove o sublinhado padrão de links azuis do navegador */
+
     width: 100%;
     margin-bottom: 24px;
     background: var(--gradient-button);

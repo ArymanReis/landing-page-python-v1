@@ -1,0 +1,117 @@
+/* assets/css/sections/_faq.css */
+
+.faq {
+    background-color: var(--color-bg-dark);
+    padding: 80px var(--container-padding);
+}
+
+.faq__container {
+    max-width: 800px; /* Nosso padrão de leitura */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.faq__title {
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.faq__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center; /* Centraliza no mobile */
+}
+
+/* --- ITEM DO FAQ (O Vidro Fosco) --- */
+.faq__item {
+    width: 100%;
+    max-width: 353px; /* Limite do mobile conforme o seu Figma */
+    border-radius: 5px;
+    border: 1px solid var(--color-text-light);
+    background: rgba(251, 248, 252, 0.20);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    overflow: hidden; /* Garante que o conteúdo não vaze da borda arredondada */
+    transition: all 0.3s ease;
+}
+
+/* --- BOTÃO DA PERGUNTA --- */
+.faq__question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-light);
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    text-align: left;
+    gap: 16px;
+}
+
+/* --- A SETA ANIMADA --- */
+.faq__icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.4s ease; /* Animação suave de giro */
+}
+
+/* Gira a seta quando o item ganha a classe 'active' no JavaScript */
+.faq__item.active .faq__icon {
+    transform: rotate(-180deg);
+}
+
+/* --- A RESPOSTA (O Segredo da Animação) --- */
+.faq__answer-wrapper {
+    display: grid;
+    grid-template-rows: 0fr; /* Começa fechado (altura zero) */
+    transition: grid-template-rows 0.4s ease; /* Tempo da animação de abrir/fechar */
+}
+
+.faq__item.active .faq__answer-wrapper {
+    grid-template-rows: 1fr; /* Abre para a altura total do texto */
+}
+
+.faq__answer {
+    overflow: hidden; /* Esconde o texto quando estiver fechado */
+}
+
+.faq__answer p {
+    padding: 0 20px 20px 20px; /* Dá o respiro embaixo da resposta */
+    color: var(--color-text-light);
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.4s ease; /* Aparece suavemente */
+}
+
+.faq__item.active .faq__answer p {
+    opacity: 1; /* Fica visível quando aberto */
+}
+
+/* =========================================
+   RESPONSIVIDADE (Desktop)
+   ========================================= */
+@media (min-width: 768px) {
+    .faq__title {
+        font-size: 32px;
+    }
+
+    .faq__item {
+        max-width: 100%; /* No PC, expande para ocupar os 800px da coluna */
+    }
+}
