@@ -1,0 +1,90 @@
+.authority {
+    background-color: var(--color-bg-dark);
+    padding: 140px var(--container-padding) 60px;
+}
+
+.authority__container {
+    max-width: 800px; /* Mantendo o nosso padrão de leitura */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.authority__title {
+    font-size: 24px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.authority__title strong {
+    font-weight: var(--font-weight-semibold); /* Peso 600 */
+}
+
+/* --- CONTEÚDO (FOTO + TEXTO) --- */
+.authority__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.authority__image-wrapper {
+    width: 100%;
+    max-width: 280px; 
+}
+
+.authority__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+    /* --- Borda e Radius CSS removidos --- */
+    /* A imagem de origem já possui a borda e o formato chanfrado */
+    
+    /* Mantemos a sombra para a foto "descolar" do fundo escuro */
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+.authority__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--color-text-light);
+    font-size: 16px; 
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5; 
+    text-align: center;
+}
+
+.authority__text strong {
+    font-weight: var(--font-weight-semibold); /* Peso 600 em todos os destaques do texto */
+}
+
+/* =========================================
+   RESPONSIVIDADE (Desktop)
+   ========================================= */
+@media (min-width: 768px) {
+    .authority__title {
+        font-size: 32px; 
+    }
+
+    .authority__content {
+        flex-direction: row; /* Coloca a foto na esquerda e o texto na direita */
+        align-items: center;
+        text-align: left;
+        gap: 64px;
+    }
+
+    .authority__image-wrapper {
+        flex: 0 0 320px; /* Trava a largura da foto no desktop */
+    }
+
+    .authority__text {
+        text-align: left; /* Alinha o texto à esquerda no PC */
+        font-size: 18px; 
+    }
+}

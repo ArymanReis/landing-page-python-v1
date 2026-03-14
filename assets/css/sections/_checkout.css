@@ -1,0 +1,243 @@
+/* assets/css/sections/_checkout.css */
+
+.checkout {
+    background-color: var(--color-bg-dark);
+    padding: 80px var(--container-padding);
+}
+
+.checkout__container {
+    max-width: 800px; /* Nosso padrão ouro de largura */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.checkout__title {
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+/* =========================================
+   CARD DE PREÇO E VIDRO FOSCO COM BORDA GRADIENTE
+   ========================================= */
+.checkout__card {
+    position: relative; /* Essencial para a borda mágica ficar presa no card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 353px; 
+    padding: 32px 24px;
+    
+    /* Fundo de vidro fosco puro e intacto */
+    background: rgba(251, 248, 252, 0.20);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 5px; /* Mantém o arredondamento */
+}
+
+/* A Mágica: A camada que desenha apenas a borda em gradiente */
+.checkout__card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    border-radius: 5px; /* Acompanha o formato do card */
+    padding: 3px; /* Esta é a espessura da sua borda (3px) */
+    background: var(--gradient-button); /* Usando o gradiente que já temos, ou coloque o seu aqui */
+    
+    /* Faz o recorte perfeito no meio para o vidro fosco aparecer */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    
+    pointer-events: none; /* Garante que essa borda não atrapalhe o clique no botão */
+}
+.checkout__logo {
+    margin-bottom: 16px;
+}
+
+.checkout__card-title {
+    font-size: 20px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+}
+
+/* --- LISTA DE ENTREGÁVEIS --- */
+.checkout__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.checkout__list li {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.checkout__list strong {
+    font-weight: var(--font-weight-semibold);
+}
+
+/* --- TAG BÔNUS --- */
+.checkout__tag {
+    background-color: var(--color-text-light); /* Fundo branco/gelo */
+    color: var(--color-primary); /* Azul */
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    padding: 8px 16px;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+/* --- BLOCO DE PREÇO --- */
+.checkout__price-anchor {
+    color: var(--color-text-light);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.price-de {
+    font-size: 12px;
+    font-weight: var(--font-weight-regular);
+}
+
+.price-currency-small {
+    font-size: 12px;
+    font-weight: var(--font-weight-extrabold);
+}
+
+.price-old {
+    font-size: 24px;
+    font-weight: var(--font-weight-extrabold);
+    text-decoration: line-through;
+}
+
+.checkout__price-main {
+    font-size: 50px;
+    font-weight: var(--font-weight-extrabold);
+    line-height: 1.2;
+    color: var(--color-text-light);
+    margin-bottom: 8px;
+}
+
+.checkout__price-cash {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-light);
+    margin-bottom: 32px;
+}
+
+/* --- BOTÃO --- */
+.checkout__button {
+    width: 100%;
+    margin-bottom: 24px;
+    background: var(--gradient-button);
+    color: var(--color-text-light);
+    padding: 16px;
+    border-radius: var(--radius-button);
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    
+    /* Prepara o botão para animar suavemente */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* O Efeito de Zoom (Hover) */
+.checkout__button:hover {
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+}
+
+/* --- SELOS DE GARANTIA --- */
+.checkout__badges {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge img {
+    width: 24px;
+    height: 24px;
+}
+
+.badge span {
+    font-size: 12px;
+    color: var(--color-text-light);
+    line-height: 1.25;
+}
+
+/* =========================================
+   BLOCO DE GARANTIA (RISCO ZERO)
+   ========================================= */
+.checkout__guarantee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin-top: 24px;
+}
+
+.guarantee-icon {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--color-text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-text-light);
+    margin-bottom: 16px;
+}
+
+.guarantee-title {
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-light);
+    margin-bottom: 12px;
+}
+
+.guarantee-text {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+    color: var(--color-text-light);
+}
+
+/* =========================================
+   RESPONSIVIDADE (Desktop)
+   ========================================= */
+@media (min-width: 768px) {
+    .checkout__title {
+        font-size: 32px;
+    }
+
+    .checkout__card {
+        max-width: 450px; /* Dá mais respiro para o card na tela grande */
+        padding: 48px 40px;
+    }
+}
